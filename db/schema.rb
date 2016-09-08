@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 20160907141154) do
     t.string   "name"
     t.string   "logo"
     t.text     "address"
-    t.decimal  "rating"
+    t.decimal  "rating",     precision: 10, scale: 2
     t.boolean  "tenbis"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
 end

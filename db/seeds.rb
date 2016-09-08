@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+20.times do |i|
+  Restaurant.create(name: "Restaurant #{i}", address: "Dobnov #{i}, Tel Aviv", rating: rand(0.0...5.0), tenbis: [true, false].sample)
+end

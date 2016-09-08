@@ -4,7 +4,7 @@ class CreateRestaurants < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :logo
       t.text :address
-      t.decimal :rating
+      t.decimal :rating, :scale => 2, :precision => 10
       t.boolean :tenbis
 
       t.timestamps
