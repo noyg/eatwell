@@ -1,4 +1,6 @@
-var NewRestaurant = React.createClass({
+import React from 'react';
+
+export default class NewRestaurant extends React.Component {
     handleClick() {
         var name = this.refs.name.value;
         var address = this.refs.address.value;
@@ -10,7 +12,7 @@ var NewRestaurant = React.createClass({
                 this.props.handleSubmit(restaurant);
             }
         });
-    },
+    }
 
     render() {
         return (
@@ -22,4 +24,4 @@ var NewRestaurant = React.createClass({
             </div>
         )
     }
-});
+}

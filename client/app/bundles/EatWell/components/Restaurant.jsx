@@ -1,7 +1,10 @@
-var Restaurant = React.createClass({
-    getInitialState() {
+import React from 'react';
+
+export default class Restaurant extends React.Component {
+    /*getInitialState() {
         return {editable: false}
-    },
+    }*/
+
     handleEdit() {
         if (this.state.editable) {
             var id = this.props.restaurant.id;
@@ -12,7 +15,7 @@ var Restaurant = React.createClass({
 
         }
         this.setState({editable: !this.state.editable});
-    },
+    }
 
     render() {
         var name = this.state.editable ? <input type='text' defaultValue={this.props.restaurant.name} ref='name'/> :
@@ -32,4 +35,4 @@ var Restaurant = React.createClass({
             </div>
         )
     }
-});
+}
