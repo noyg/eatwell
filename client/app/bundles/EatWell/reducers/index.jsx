@@ -2,12 +2,14 @@
 // See also /client/app/bundles/EatWell/store/eatWellStore.jsx
 // A real world app will likely have many reducers and it helps to organize them in one file.
 import eatWellReducer from './eatWellReducer';
-import { $$initialState as $$eatWellState } from './eatWellReducer';
+import {reducer as formReducer} from 'redux-form'
+import {$$initialState as $$eatWellState} from './eatWellReducer';
 
 export default {
-  $$eatWellStore: eatWellReducer,
+    $$eatWellStore: eatWellReducer,
+    form: formReducer
 };
 
 export const initialStates = {
-  $$eatWellState,
+    $$eatWellState,
 };

@@ -4,10 +4,18 @@
 import mirrorCreator from 'mirror-creator';
 
 const actionTypes = mirrorCreator([
-    'HELLO_WORLD_NAME_UPDATE',
+    'EAT_WELL_RESTAURANTS_FETCH',
+    'EAT_WELL_RESTAURANTS_FETCH_STARTED',
+    'EAT_WELL_RESTAURANTS_FETCH_COMPLETED',
+    'EAT_WELL_RESTAURANTS_FETCH_ERROR',
+    'EAT_WELL_RESTAURANT_CREATE',
+    'EAT_WELL_RESTAURANT_ADD',
+    'EAT_WELL_RESTAURANT_REMOVE',
+    'EAT_WELL_RESTAURANT_UPDATE',
+    'EAT_WELL_RESTAURANT_DELETE',
 ]);
 
-// actionTypes = {HELLO_WORLD_NAME_UPDATE: "HELLO_WORLD_NAME_UPDATE"}
-// Notice how we don't have to duplicate HELLO_WORLD_NAME_UPDATE twice
+// actionTypes = {EAT_WELL_NAME_UPDATE: "EAT_WELL_NAME_UPDATE"}
+// Notice how we don't have to duplicate EAT_WELL_NAME_UPDATE twice
 // thanks to mirror-creator.
 export default actionTypes;
