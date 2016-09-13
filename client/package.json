@@ -1,6 +1,9 @@
 {
-  "name": "react-webpack-rails-tutorial",
+  "name": "eat-well",
   "version": "0.0.1",
+  "description": "A pet project",
+  "repository": "https://github.com/noyg/eatwell",
+  "license": "MIT",
   "engines": {
     "node": "5.10.0",
     "npm": "3.5.0"
