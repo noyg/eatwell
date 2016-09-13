@@ -29,7 +29,7 @@ export default props => {
         applyMiddleware(thunkMiddleware)
     );
     const storeCreator = composedStore(createStore);
-    const store = storeCreator(reducer, initialState);
+    const store = storeCreator(reducer, initialState, window.devToolsExtension && window.devToolsExtension());
 
     return store;
 };
