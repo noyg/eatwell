@@ -6,6 +6,8 @@ import {compose, createStore, applyMiddleware, combineReducers} from 'redux';
 // once your app has asynchronous actions.
 import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
+import { configure } from "redux-auth";
+
 const logger = createLogger();
 
 import reducers from '../reducers';
@@ -20,7 +22,7 @@ export default props => {
     const initialState = {
         $$eatWellStore: $$eatWellState.merge({
             restaurants
-        }),
+        })
     };
 
     const reducer = combineReducers(reducers);
@@ -29,7 +31,13 @@ export default props => {
         applyMiddleware(thunkMiddleware)
     );
     const storeCreator = composedStore(createStore);
-    const store = storeCreator(reducer, initialState);
+    const store = storeCreator(reducer, initialState, window.devToolsExtension ? window.devToolsExtension() : arg => arg);
+
+    store.dispatch(configure(
+        [
+            {default: {apiUrl: 'http://localhost:3000/'}}
+        ]
+    ));
 
     return store;
 };

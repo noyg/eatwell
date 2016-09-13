@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactOnRails from 'react-on-rails';
 import {Provider} from 'react-redux';
+import { configure } from "redux-auth";
 
 import createStore from '../store/eatWellStore';
 import EatWell from '../containers/EatWell';
@@ -12,6 +13,11 @@ import EatWell from '../containers/EatWell';
 // knowing the locale. See the React on Rails documentation for more info on the railsContext
 const EatWellApp = (props, _railsContext) => {
     const store = createStore(props);
+
+    // store.dispatch(configure({
+    //     apiUrl: 'http://localhost:3000/'
+    // }));
+
     const reactComponent = (
         <Provider store={store}>
             <EatWell />

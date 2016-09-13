@@ -1,9 +1,12 @@
 import React, {PropTypes} from 'react';
-import EatWellWidget from '../components/EatWellWidget';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import Immutable from 'immutable';
 import * as eatWellActionCreators from '../actions/eatWellActionCreators';
+
+import EatWellWidget from '../components/EatWellWidget';
+import {AuthGlobals, EmailSignUpForm} from "redux-auth/default-theme";
+
 
 function select(state) {
     // Which part of the Redux global state does our component want to receive as props?
@@ -19,7 +22,11 @@ const EatWell = (props) => {
     const restaurants = $$eatWellStore.get('restaurants');
 
     return (
-        <EatWellWidget {...{deleteRestaurant, createRestaurant, restaurants}} />
+        <div>
+            <AuthGlobals />
+            <EmailSignUpForm endpoint={"sign_up"}/>
+            <EatWellWidget {...{deleteRestaurant, createRestaurant, restaurants}} />
+        </div>
     );
 };
 
