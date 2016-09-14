@@ -1,7 +1,8 @@
 import React, {PropTypes} from 'react';
+import css from './EatWellWidget.scss';
 
-import AllRestaurants from './AllRestaurants';
-import RestaurantForm from './RestaurantForm';
+import AllRestaurants from '../AllRestaurants/AllRestaurants';
+import RestaurantForm from '../RestaurantForm/RestaurantForm';
 
 // Simple example of a React "dumb" component
 export default class EatWellWidget extends React.Component {

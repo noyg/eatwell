@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import css from './Restaurant.scss';
 
 export default class Restaurant extends React.Component {
     static propTypes = {
@@ -9,7 +10,7 @@ export default class Restaurant extends React.Component {
     render() {
         const {id, name, address, rating} = this.props.restaurant;
         return (
-            <div>
+            <div className={css.restaurant}>
                 <h3>{name}
                     <small>{rating}</small>
                 </h3>

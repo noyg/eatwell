@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
+import css from './AllRestaurants.scss';
 
-import Restaurant from './Restaurant';
+import Restaurant from '../Restaurant/Restaurant';
 
 export default class AllRestaurants extends React.Component {
     static propTypes = {

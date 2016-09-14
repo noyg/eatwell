@@ -4,8 +4,8 @@ import {bindActionCreators} from 'redux';
 import * as eatWellActionCreators from '../actions/eatWellActionCreators';
 import * as authActionCreators from '../actions/authActionCreators';
 
-import EatWellWidget from '../components/EatWellWidget';
-import LoginComponent from '../components/LoginComponent';
+import EatWellWidget from '../components/EatWellWidget/EatWellWidget';
+import * as Auth from '../components/Auth/auth-components';
 
 // Simple example of a React "smart" component
 const AppContainer = (props) => {
@@ -18,7 +18,7 @@ const AppContainer = (props) => {
 
     return (
         <div>
-            <LoginComponent {...{login}} />
+            <Auth.LoginComponent {...{login}} />
             <EatWellWidget {...{deleteRestaurant, createRestaurant, restaurants}} />
         </div>
     );

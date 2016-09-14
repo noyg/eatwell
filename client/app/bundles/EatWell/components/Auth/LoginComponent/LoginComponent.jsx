@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
+import css from './LoginComponent.scss';
 
-import LoginForm from './LoginForm';
+import LoginForm from '../LoginForm/LoginForm';
 
 // Simple example of a React "dumb" component
 export default class LoginComponent extends React.Component {

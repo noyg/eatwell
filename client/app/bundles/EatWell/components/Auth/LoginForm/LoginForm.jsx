@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Field, reduxForm} from 'redux-form';
+import css from './LoginForm.scss';
 
 class LoginForm extends React.Component {
     render() {
