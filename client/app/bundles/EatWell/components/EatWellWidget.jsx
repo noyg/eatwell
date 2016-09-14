@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import Immutable from 'immutable';
 
 import AllRestaurants from './AllRestaurants';
 import RestaurantForm from './RestaurantForm';
@@ -11,7 +10,7 @@ export default class EatWellWidget extends React.Component {
         // passing two properties: "data" and "actions".
         deleteRestaurant: PropTypes.func.isRequired,
         createRestaurant: PropTypes.func.isRequired,
-        restaurants: PropTypes.instanceOf(Immutable.List).isRequired
+        restaurants: PropTypes.array.isRequired
     }
 
     constructor(props, context) {

@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {Field, reduxForm} from 'redux-form/immutable';
+import {Field, reduxForm} from 'redux-form';
 
 class RestaurantForm extends React.Component {
     render() {
