@@ -29,7 +29,6 @@ export function createRestaurant(restaurant) {
             dispatch(addRestaurant(response));
         }).fail(() => dispatch(removeRestaurant(tmpId)));
     };
-
 }
 
 export function deleteRestaurant(id) {

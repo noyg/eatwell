@@ -6,14 +6,10 @@ class RestaurantForm extends React.Component {
         const {handleSubmit} = this.props;
         return (
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name">Name</label>
-                    <Field name="name" component="input" type="text" required="required"/>
-                </div>
-                <div>
-                    <label htmlFor="address">Address</label>
-                    <Field name="address" component="textarea" required="required"/>
-                </div>
+                <label htmlFor="name">Name</label>
+                <Field name="name" component="input" type="text" required="required"/>
+                <label htmlFor="address">Address</label>
+                <Field name="address" component="textarea" required="required"/>
                 <button>Submit</button>
             </form>
         )

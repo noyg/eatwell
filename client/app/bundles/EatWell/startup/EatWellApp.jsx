@@ -2,7 +2,7 @@ import React from 'react';
 import ReactOnRails from 'react-on-rails';
 import {Provider} from 'react-redux';
 
-import EatWell from '../containers/EatWell';
+import AppContainer from '../containers/AppContainer';
 
 import ApplicationStore from '../store/ApplicationStore'
 
@@ -16,7 +16,7 @@ const EatWellApp = () => {
 
     return (
         <Provider store={store}>
-            <EatWell />
+            <AppContainer />
         </Provider>
     );
 };
