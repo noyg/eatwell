@@ -12,6 +12,7 @@ const config = {
         'es5-shim/es5-shim',
         'es5-shim/es5-sham',
         'babel-polyfill',
+        'bootstrap-loader',
         './app/bundles/EatWell/startup/EatWellApp',
     ],
 
@@ -34,7 +35,7 @@ const config = {
             },
         }),
         new ExtractTextPlugin('[name]-bundle.css', {allChunks: true}),
-        new webpack.optimize.DedupePlugin()
+        new webpack.optimize.DedupePlugin(),
     ],
     module: {
         loaders: [
@@ -60,15 +61,16 @@ const config = {
                 loader: ExtractTextPlugin.extract(
                     'style',
                     'css?minimize&modules&importLoaders=3&localIdentName=[name]__[local]__[hash:base64:5]' +
-                    'postcss' +
-                    'sass' +
-                    'sass-resources'
+                    '!postcss' +
+                    '!sass' +
+                    '!sass-resources'
                 ),
             },
             { test: /\.(ttf|eot)$/, loader: 'file' },
 
             // Example to confirm that subdirectories workƒ√
             { test: /\.(jpe?g|png|gif|svg|ico|woff2?)$/, loader: 'url?limit=10000&name=images/[hash].[ext]' },
+            { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'file' },
         ],
     },
     // Place here all postCSS plugins here, so postcss-loader will apply them
@@ -79,7 +81,10 @@ const config = {
     // And sass-resources-loader will load them in every CSS Module (SASS file) for you
     // (so don't need to @import them explicitly)
     // https://github.com/shakacode/sass-resources-loader
-    sassResources: ['./app/assets/styles/app-variables.scss'],
+    sassResources: [
+        './app/assets/styles/app-variables.scss',
+        './node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss',
+    ],
 };
 
 module.exports = config;
