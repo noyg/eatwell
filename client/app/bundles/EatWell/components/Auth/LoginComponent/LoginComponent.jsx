@@ -6,7 +6,7 @@ import LoginForm from '../LoginForm/LoginForm';
 // Simple example of a React "dumb" component
 export default class LoginComponent extends React.Component {
     static propTypes = {
-        login: PropTypes.func.isRequired,
+        // login: PropTypes.func.isRequired,
     }
 
     constructor(props, context) {

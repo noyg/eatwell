@@ -66,10 +66,19 @@ const config = {
                     '!sass-resources'
                 ),
             },
-            { test: /\.(ttf|eot)$/, loader: 'file' },
+            {
+                test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                // Limiting the size of the woff fonts breaks font-awesome ONLY for the extract text plugin
+                // loader: "url?limit=10000"
+                loader: "url"
+            },
+            {
+                test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+                loader: 'file'
+            },
 
             // Example to confirm that subdirectories workƒ√
-            { test: /\.(jpe?g|png|gif|svg|ico|woff2?)$/, loader: 'url?limit=10000&name=images/[hash].[ext]' },
+            { test: /\.(jpe?g|png|gif|ico)$/, loader: 'url?limit=10000&name=images/[hash].[ext]' },
             { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'file' },
         ],
     },
@@ -82,8 +91,8 @@ const config = {
     // (so don't need to @import them explicitly)
     // https://github.com/shakacode/sass-resources-loader
     sassResources: [
+        './app/assets/styles/_variables.scss',
         './app/assets/styles/app-variables.scss',
-        './node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss',
     ],
 };
 

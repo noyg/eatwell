@@ -1,0 +1,18 @@
+.header {
+  background-image: url('./images/bg.png');
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  padding: ($line-height-computed * 2) 0;
+  margin-bottom: $line-height-computed * 2;
+
+  h1, h2 {
+    color: white;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+}

@@ -6,6 +6,8 @@ import * as authActionCreators from '../actions/authActionCreators';
 
 import EatWellWidget from '../components/EatWellWidget/EatWellWidget';
 import * as Auth from '../components/Auth/auth-components';
+import Header from '../components/Header/Header';
+import Body from '../components/Body/Body';
 
 // Simple example of a React "smart" component
 const AppContainer = (props) => {
@@ -18,8 +20,15 @@ const AppContainer = (props) => {
 
     return (
         <div>
-            <Auth.LoginComponent {...{login}} />
-            <EatWellWidget {...{deleteRestaurant, createRestaurant, restaurants}} />
+            <Header />
+            <Body />
+
+
+
+
+
+            {/*<Auth.LoginComponent {...{login}} />*/}
+            {/*<EatWellWidget {...{deleteRestaurant, createRestaurant, restaurants}} />*/}
         </div>
     );
 };
