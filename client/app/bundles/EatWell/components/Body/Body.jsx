@@ -7,7 +7,7 @@ import AllRestaurants from '../AllRestaurants/AllRestaurants';
 import RestaurantFilters from '../RestaurantFilters/RestaurantFilters';
 
 const Body = (props) => {
-    const {dispatch, eatWellStore} = props;
+    const {dispatch, eatWellStore, authStore} = props;
     const restaurants = eatWellStore['restaurants'];
     const deleteRestaurant = () => {
     };
