@@ -1,10 +1,11 @@
 import actionTypes from '../constants/authConstants';
 
 export const initialState = {
-    user: {}
+    user: {},
+    loggedIn: false
 };
 
-export default function authReducer(state = initialState, action) {
+export function reducer(state = initialState, action) {
     const {type, payload} = action;
 
     switch (type) {
